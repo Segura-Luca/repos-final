@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golomix - E-commerce de Boxes Personalizables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/imagesnew/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <button class="navbar-toggler border-0 order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-flex align-items-center order-2 mx-auto mx-lg-0" href="index.html">
+                <img src="assets/imagesnew/LOGO1.png" alt="Golomix Logo" class="logo-img">
+            </a>
+            <div class="collapse navbar-collapse order-3" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gomitas.html">Gomitas</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="https://wa.me/542233052029" target="_blank" class="btn btn-primary-custom rounded-pill px-4">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">Encontra el regalo <span class="text-primary-custom">Perfecto</span> con Golomix</h1>
+                    <p class="lead mb-5 text-secondary">no regales cualquier cosa, regala emocion y una experiencia</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#productos" class="btn btn-cta">Explorar Boxes</a>
+                        <a href="gomitas.html" class="btn btn-outline-dark rounded-pill px-4 py-2">Ver Gomitas</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/imagesnew/c32c5647-499e-4d91-bec4-d8efc1d23100.png" alt="Golomix Banner" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5" id="categorias">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title fw-bold">Nuestras Categorías</h2>
+            </div>
+            <div class="row g-4 text-center justify-content-center">
+                <div class="col-6 col-md-4">
+                    <a href="#box-gomitas" class="text-decoration-none d-block h-100">
+                        <div class="p-4 rounded-4 bg-primary-light h-100 category-btn">
+                            <i class="bi bi-box2-heart text-primary-custom fs-1 mb-3"></i>
+                            <h5 class="fw-bold text-dark">Box de Gomitas</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="#mas-box" class="text-decoration-none d-block h-100">
+                        <div class="p-4 rounded-4 bg-yellow-candy h-100 category-btn">
+                            <i class="bi bi-stars text-dark fs-1 mb-3"></i>
+                            <h5 class="fw-bold text-dark">Más Box</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="#adicionales" class="text-decoration-none d-block h-100">
+                        <div class="p-4 rounded-4 bg-celeste-pastel h-100 category-btn">
+                            <i class="bi bi-plus-circle text-dark fs-1 mb-3"></i>
+                            <h5 class="fw-bold text-dark">Adicionales</h5>
+                            <p class="small text-dark mb-0">(Box pequeñas, ramos, etc.)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Sections -->
+    <section class="py-5 bg-white" id="productos">
+        <div class="container">
+            <!-- Box de Gomitas -->
+            <div id="box-gomitas" class="mb-5 pt-4">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">Box de Gomitas</h3>
+                    <div class="divider mx-auto"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/acidbox1.jpeg" class="product-img contain" alt="Acid Box">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Xtreme box</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$15.300</p>
+                                <p class="card-text text-secondary mb-4 small"> 400g de sabores ácidos y frutales para los amantes del acido.</p>
+                                <a href="xtreme-box.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/littlesweet1.jpeg" class="product-img contain" alt="Little Sweet">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Little Sweet </h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$14.500</p>
+                                <p class="card-text text-secondary mb-4 small">Pequeños detalles, grandes sonrisas. El regalo ideal para cualquier día.</p>
+                                <a href="little-sweet.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mas Box -->
+            <div id="mas-box" class="mb-5 pt-4">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">Más Box</h3>
+                    <div class="divider mx-auto"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/boxplatinum1.jpeg" class="product-img contain" alt="Box Platinum">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box Platinum</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$23.500</p>
+                                <p class="card-text text-secondary mb-4 small">Gran selección de chocolates y golosinas perfecta para regalar.</p>
+                                <a href="box-platinum.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/netflix1.jpeg" class="product-img contain" alt="Netflix Box">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box Netflix</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$28.700</p>
+                                <p class="card-text text-secondary mb-4 small">Crea un plan unico con esta box y tene un momento inolvidable.</p>
+                                <a href="box-netflix.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_picada.jpg" class="product-img contain" alt="Picada Dulce">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Picada Corazon</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$14.800</p>
+                                <p class="card-text text-secondary mb-4 small">400g de gomitas y la mejor sorpresa romantica</p>
+                                <a href="picada-corazon.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_divisiones.jpg" class="product-img contain" alt="Box Divisiones">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box Mix</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$13.400</p>
+                                <p class="card-text text-secondary mb-4 small">Todo ordenado y en su lugar, perfecta para los amantes de la variedad.</p>
+                                <a href="box-divisiones.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adicionales -->
+            <div id="adicionales" class="mb-5 pt-4">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">Adicionales</h3>
+                    <div class="divider mx-auto"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_Ramo.jpg" class="product-img contain" alt="Ramo de Golosinas">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Ramo de gomitas</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$12.000</p>
+                                <p class="card-text text-secondary mb-4 small">Un ramo que no se marchita y que todos quieren recibir.</p>
+                                <a href="ramo-de-gomitas.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_corazon.jpg" class="product-img contain" alt="Box Corazón">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box Corazón </h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$13.600</p>
+                                <p class="card-text text-secondary mb-4 small">Una box de gomitas con una presentacion dulce y unica</p>
+                                <a href="box-corazon.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_20241103_124324_845.webp" class="product-img contain" alt="Mini Box">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box700</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$21.000</p>
+                                <p class="card-text text-secondary mb-4 small">(Solo apto para adictos a las gomitas).</p>
+                                <a href="box-700.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_20241203_101434_591.webp" class="product-img contain" alt="Detalle Especial">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box Deluxe</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$19.000</p>
+                                <p class="card-text text-secondary mb-4 small">Porque cualquier momento es bueno para regalar algo dulce.</p>
+                                <a href="box-deluxe.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_20241205_123313_045~2.jpg" class="product-img contain" alt="Box Regalo">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box visor</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$15.400</p>
+                                <p class="card-text text-secondary mb-4 small">El regalo clásico que nunca falla.</p>
+                                <a href="box-visor.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="product-img-container">
+                                <img src="assets/imagesnew/IMG_20240707_162608_712.webp" class="product-img contain" alt="Box Love Premium">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h5 class="card-title fw-bold mb-2">Box Love</h5>
+                                <p class="text-primary-custom fw-bold fs-5 mb-2">$14.000</p>
+                                <p class="card-text text-secondary mb-4 small">Una explosión de amor y dulzura en nuestra caja más romántica.</p>
+                                <a href="box-love.html" class="btn btn-primary-custom w-100 rounded-pill">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <img src="assets/imagesnew/LOGO1.png" alt="Golomix Logo" class="logo-img mb-3">
+                    <p class="text-secondary small">Venta de boxes personalizables y golosinas para hacer tus momentos más dulces.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/golomix.mdp/"><i class="bi bi-instagram"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <h5 class="fw-bold mb-4">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-secondary text-decoration-none">Inicio</a></li>
+                        <li><a href="#productos" class="text-secondary text-decoration-none">Productos</a></li>
+                        <li><a href="gomitas.html" class="text-secondary text-decoration-none">Gomitas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <h5 class="fw-bold mb-4">Contacto</h5>
+                    <p class="text-secondary mb-1">WhatsApp: 223 305 2029</p>
+                    <p class="text-secondary">Mar del Plata, Argentina</p>
+                    
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-secondary small">
+                &copy; 2026 Golomix. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/542233052029" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

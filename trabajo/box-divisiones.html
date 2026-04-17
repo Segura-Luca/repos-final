@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Mix - Golomix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/imagesnew/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <button class="navbar-toggler border-0 order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-flex align-items-center order-2 mx-auto mx-lg-0" href="index.html">
+                <img src="assets/imagesnew/LOGO1.png" alt="Golomix Logo" class="logo-img">
+            </a>
+            <div class="collapse navbar-collapse order-3" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gomitas.html">Gomitas</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="https://wa.me/542233052029" target="_blank" class="btn btn-primary-custom rounded-pill px-4">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-primary-custom">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="index.html#productos" class="text-decoration-none text-primary-custom">Productos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Box Mix</li>
+                </ol>
+            </nav>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div id="productCarousel" class="carousel slide rounded-4 overflow-hidden shadow" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/imagesnew/IMG_divisiones.jpg" class="d-block w-100" alt="Box Divisiones 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/imagesnew/IMG_divisiones 2.jpg" class="d-block w-100" alt="Box Divisiones 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                    <div class="row mt-3 g-2">
+                        <div class="col-4">
+                            <img src="assets/imagesnew/IMG_divisiones.jpg" class="img-fluid rounded-3 shadow-sm thumbnail-btn active" data-bs-target="#productCarousel" data-bs-slide-to="0" alt="Thumbnail 1">
+                        </div>
+                        <div class="col-4">
+                            <img src="assets/imagesnew/IMG_divisiones 2.jpg" class="img-fluid rounded-3 shadow-sm thumbnail-btn" data-bs-target="#productCarousel" data-bs-slide-to="1" alt="Thumbnail 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="fw-bold mb-3">Box Mix</h1>
+                    <div class="badge bg-yellow-candy text-dark mb-3 px-3 py-2 rounded-pill">Categoría: Más Box</div>
+                    <p class="lead text-secondary mb-4">Todo ordenado y en su lugar. Esta box es perfecta para quienes aman la variedad y quieren disfrutar de distintos sabores sin que se mezclen.</p>
+                    
+                    <h5 class="fw-bold mb-3">¿Qué incluye?</h5>
+                    <ul class="list-unstyled mb-5">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Box con compartimentos individuales</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Variedad de gomitas y caramelos</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Selección de frutos secos o chocolates</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-custom me-2"></i> Presentación impecable y colorida</li>
+                    </ul>
+
+                    <div class="d-grid gap-3">
+                        <a href="https://wa.me/542233052029?text=Hola%20Golomix!%20Me%20interesa%20comprar%20la%20Box%20Mix" target="_blank" class="btn btn-cta btn-lg shadow">
+                            <i class="bi bi-whatsapp me-2"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 text-center text-lg-start">
+                <div class="col-lg-6">
+                    <img src="assets/imagesnew/LOGO1.png" alt="Golomix Logo" class="logo-img mb-3">
+                    <p class="text-secondary small">Venta de boxes personalizables y golosinas para hacer tus momentos más dulces.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <h5 class="fw-bold mb-3">Contacto</h5>
+                    <p class="text-secondary mb-1">WhatsApp: 223 305 2029</p>
+                    <p class="text-secondary">Mar del Plata, Argentina</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-secondary small">
+                &copy; 2026 Golomix. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carousel = document.getElementById('productCarousel');
+        const thumbnails = document.querySelectorAll('.thumbnail-btn');
+        
+        carousel.addEventListener('slide.bs.carousel', event => {
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnails[event.to].classList.add('active');
+        });
+    </script>
+</body>
+</html>
