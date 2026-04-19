@@ -1,0 +1,107 @@
+<!-- 
+    CALCULADORA DE INTERÉS COMPUESTO
+    Este componente maneja tanto la interfaz como la lógica de cálculo en el cliente.
+-->
+<div class="card shadow-sm border-0 p-4">
+    <h3 class="mb-4" style="color: #0B1F3B;">Calculadora de Interés Compuesto</h3>
+    
+    <!-- Entradas de datos del usuario -->
+    <div class="mb-3">
+        <label class="form-label">Capital Inicial ($)</label>
+        <input type="number" id="capital" class="form-control" min="0">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Tasa de Interés Anual (%)</label>
+        <input type="number" id="tasa" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Años</label>
+        <input type="number" id="anios" class="form-control" min="0">
+    </div>
+    
+    <!-- Botón de acción -->
+    <button onclick="calcular()" class="btn w-100 text-white" style="background-color: #1E4DB7;">Calcular</button>
+    
+    <!-- Área donde se mostrará el resultado (con altura mínima para evitar saltos) -->
+    <div id="resultado" class="mt-4 p-3 rounded" style="background-color: #F5F7FA; border-left: 5px solid #1E4DB7; min-height: 100px;">
+        <h5 class="mb-1">Resultado Final:</h5>
+        <p id="monto-final" class="h4 fw-bold mb-0" style="color: #0B1F3B;">$ 0.00</p>
+    </div>
+</div>
+
+<!-- Modal para Errores -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header text-white" style="background-color: #0B1F3B;">
+                <h5 class="modal-title" id="errorModalLabel"><i class="bi bi-exclamation-triangle-fill me-2"></i>Atención</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4">
+                <p id="errorModalMensaje" class="mb-0 fs-5"></p>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn text-white" style="background-color: #1E4DB7;" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /**
+     * Muestra un mensaje de error usando el modal de Bootstrap y actualiza el texto de resultado.
+     */
+    function mostrarError(mensaje) {
+        document.getElementById('errorModalMensaje').innerText = mensaje;
+        document.getElementById('monto-final').innerText = "Resultado Inválido";
+        document.getElementById('monto-final').style.color = "#dc3545"; // Rojo para indicar error
+        const modal = new bootstrap.Modal(document.getElementById('errorModal'));
+        modal.show();
+    }
+
+    /**
+     * Lógica de cálculo matemático del interés compuesto.
+     * Fórmula: A = P(1 + r)^t
+     */
+    function calcular() {
+        const capitalInput = document.getElementById('capital');
+        const tasaInput = document.getElementById('tasa');
+        const aniosInput = document.getElementById('anios');
+        const montoP = document.getElementById('monto-final');
+
+        // Conversión de valores de texto a números
+        const P = parseFloat(capitalInput.value);
+        const r = parseFloat(tasaInput.value) / 100; // La tasa se divide por 100 para obtener el decimal
+        const t = parseFloat(aniosInput.value);
+        
+        // Validación de campos vacíos o no numéricos
+        if (isNaN(P) || isNaN(r) || isNaN(t)) {
+            mostrarError("Por favor completa todos los campos correctamente.");
+            return;
+        }
+
+        // Validación de lógica de negocio (Capital y Tiempo no negativos)
+        if (P < 0 || t < 0) {
+            mostrarError("El capital y los años no pueden ser negativos.");
+            return;
+        }
+
+        // Aplicación de la fórmula de interés compuesto
+        const A = P * Math.pow((1 + r), t);
+        
+        // Restaurar color original y mostrar el resultado formateado
+        montoP.style.color = "#0B1F3B";
+        montoP.innerText = "$ " + A.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    // Listener para resetear el resultado si se borra cualquier campo
+    ['capital', 'tasa', 'anios'].forEach(id => {
+        document.getElementById(id).addEventListener('input', function() {
+            if (this.value === "") {
+                const montoP = document.getElementById('monto-final');
+                montoP.innerText = "$ 0.00";
+                montoP.style.color = "#0B1F3B";
+            }
+        });
+    });
+</script>
