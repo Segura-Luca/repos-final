@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo aumento en el precio de los combustibles - Nexo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .navbar-brand { font-family: 'Playfair Display', serif; letter-spacing: 2px; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Header / Navbar fijo -->
+    <!-- bg-nexo-principal: Clase personalizada para el color azul oscuro del diario -->
+    <nav class="navbar navbar-expand-lg bg-nexo-principal navbar-dark sticky-top">
+        <div class="container">
+            <!-- fs-1: Tamaño de fuente grande responsivo -->
+            <a class="navbar-brand mx-auto fs-1" href="../index.html">NEXO</a>
+        </div>
+    </nav>
+
+    <!-- Artículo principal -->
+    <!-- container: Centra el contenido y añade márgenes laterales responsivos -->
+    <!-- my-5: Margen vertical (top/bottom) de 5 unidades -->
+    <article class="container my-5 bg-white p-3 p-md-5 rounded shadow-sm">
+        <!-- justify-content-center: Centra la fila de contenido -->
+        <div class="row justify-content-center">
+            <!-- col-lg-10: Ocupa 10 de 12 columnas en pantallas grandes para mejor legibilidad -->
+            <div class="col-lg-10">
+                <!-- categoria-noticia: Estilo para resaltar la sección del artículo -->
+                <!-- text-nexo-importante: Color rojo personalizado del diario -->
+                <span class="categoria-noticia text-nexo-importante">Economía</span>
+                <!-- display-3: Título muy grande que se ajusta automáticamente en móviles -->
+                <!-- titulo-noticia: Fuente serif y negrita personalizada -->
+                <h1 class="titulo-noticia display-3 mb-4">Nuevo aumento en el precio de los combustibles</h1>
+                
+                <!-- w-100: Asegura que la imagen ocupe todo el ancho disponible -->
+                <img src="https://www.lanacion.com.ar/resizer/v2/aumentan-los-combustibles-un-4-promedio-en-todo-el-TTV47A33IZDQRIW45O4OQ76LRE.JPG?auth=4d40902c38d39e2f4951119777553b47832da01a6769cec6d6b6dbd9&width=800&height=500&quality=70&smart=true" class="img-fluid rounded mb-4 w-100" alt="Combustibles">
+                
+                <!-- fs-5: Tamaño de fuente ligeramente superior al estándar para lectura cómoda -->
+                <!-- lh-lg: Interlineado grande (line-height) para mejorar la legibilidad -->
+                <!-- contenido-noticia: Color de texto suavizado para lectura prolongada -->
+                <div class="contenido-noticia fs-5 lh-lg">
+                    <p class="fw-bold">A partir de la medianoche, las principales petroleras del país aplicaron un incremento promedio del 4% en sus surtidores.</p>
+                    <p>Este nuevo ajuste responde a la actualización de los impuestos internos y al incremento en el precio internacional del barril de crudo. Con esta suba, llenar el tanque se vuelve un desafío cada vez mayor para el bolsillo de los trabajadores.</p>
+                    <p>Desde las cámaras que agrupan a las estaciones de servicio, advierten que el consumo ha caído significativamente en los últimos meses. "Notamos que muchos usuarios están migrando de combustibles premium a súper para abaratar costos", comentaron.</p>
+                    <!-- blockquote con utilidades de borde de Bootstrap -->
+                    <blockquote class="border-start border-4 border-nexo-importante ps-4 my-4 fst-italic">
+                        "Es el quinto aumento en lo que va del año y no vemos señales de que los precios se estabilicen en el corto plazo."
+                    </blockquote>
+                    <p>Se espera que este incremento tenga un impacto directo en la logística y el transporte de mercancías, lo que podría traducirse en nuevas subas en los precios de los productos de la canasta básica.</p>
+                </div>
+
+                <!-- border-top: Línea superior divisoria -->
+                <!-- pt-4: Padding top de 4 unidades -->
+                <div class="mt-5 border-top pt-4">
+                    <!-- btn-nexo: Botón personalizado con los colores de marca -->
+                    <a href="../index.html" class="btn btn-nexo">Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- pie-pagina: Estilo de footer personalizado -->
+    <footer class="pie-pagina mt-5">
+        <div class="container text-center">
+            <!-- fs-1: Mantiene el tamaño del logo en el footer -->
+            <h2 class="navbar-brand text-white fs-1">NEXO</h2>
+            <p>&copy; 2026 Diario NEXO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexo - El diario de la nueva era</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+           
+            letter-spacing: 2px;
+        }
+        .titulo-principal {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .titulo-seccion {
+            border-bottom: 3px solid var(--nexo-importante);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <!-- sticky-top: Mantiene el navbar fijo arriba al hacer scroll -->
+    <nav class="navbar navbar-expand-lg bg-nexo-principal navbar-dark sticky-top">
+        <div class="container">
+            <!-- mx-auto: Centra el logo horizontalmente -->
+            <a class="navbar-brand mx-auto fs-1" href="index.html">NEXO</a>
+            <!-- navbar-toggler: Botón de menú hamburguesa para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#politica">Política</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#internacional">Internacional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deportes">Deportes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#economia">Economía</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#espectaculos">Espectáculos</a></li>
+                    <!-- Botón de Contacto que activa el Modal -->
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0" data-bs-toggle="modal" data-bs-target="#modalContacto">
+                            Contacto
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        
+        <!-- Hero Section (Noticia Principal) -->
+        <div class="row mb-5">
+            <!-- col-lg-8: Ocupa 8 de 12 columnas en pantallas grandes -->
+            <div class="col-lg-8">
+                <div class="card overflow-hidden">
+                    <img src="https://www.lanacion.com.ar/resizer/v2/agustin-26P3L5JTJJFNXP6CFTHVIBIDHE.jpg?auth=dfa31d6eee0832c23b495ba7eda39aaeaeb66480cbe10f6ff5900cfa73f68e26&width=800&height=500&quality=70&smart=true" class="card-img-top" alt="Agustín Rossi">
+                    <div class="card-body p-4">
+                        <span class="categoria-noticia">Política</span>
+                        <!-- display-4: Tipografía grande responsiva de Bootstrap -->
+                        <!-- fs-md-2: Ajuste de tamaño de fuente manual para mayor control -->
+                        <h1 class="titulo-principal display-4 mt-2">Agustín Rossi sobre el futuro del peronismo: "Es tiempo de reconstrucción"</h1>
+                        <p class="card-text fs-5">El ex jefe de Gabinete analizó el escenario político actual y los desafíos de la oposición en un año clave.</p>
+                        <a href="html/noticia-rossi.html" class="btn btn-nexo">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- col-lg-4: Ocupa 4 columnas en desktop. mt-4 mt-lg-0: Margen superior en móvil, sin margen en desktop -->
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div id="economia" class="card bg-white h-100">
+                    <div class="card-body">
+                        <h4 class="titulo-seccion">Lo más leído</h4>
+                        <!-- border-bottom: Añade línea divisoria entre noticias -->
+                        <div class="mb-4 pb-3 border-bottom">
+                            <span class="categoria-noticia">Internacional</span>
+                            <h5 class="mt-1"><a href="html/noticia-trump.html" class="text-decoration-none text-dark">Trump prepara su regreso a la Casa Blanca</a></h5>
+                        </div>
+                        <div class="mb-4 pb-3 border-bottom">
+                            <span class="categoria-noticia">Economía</span>
+                            <h5 class="mt-1"><a href="html/noticia-nafta.html" class="text-decoration-none text-dark">Nuevo aumento en el precio de los combustibles</a></h5>
+                        </div>
+                        <div class="mb-4">
+                            <span class="categoria-noticia">Deportes</span>
+                            <h5 class="mt-1"><a href="html/noticia-mbappe.html" class="text-decoration-none text-dark">Mbappé: el golazo que dio la vuelta al mundo</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Deportes -->
+        <section id="deportes" class="mb-5">
+            <h2 class="titulo-seccion h1">Deportes</h2>
+            <!-- g-4: Espaciado (gutter) de 4 unidades entre columnas -->
+            <div class="row g-4">
+                <!-- col-md-4: En tablets y superior, 3 columnas por fila (4*3=12) -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://www.lanacion.com.ar/resizer/v2/italys-defender-21-alessandro-bastoni-fights-for-UBUSGZCAERFU3BCL4AKC4CY3QM.JPG?auth=8c5cffff17fd2d3dc6f40f4a622787402e618b47832da01a6769cec6d6b6dbd9&width=420&height=280&quality=70&smart=true" class="card-img-top" alt="Alessandro Bastoni">
+                        <div class="card-body">
+                            <h5 class="card-title">Bastoni, clave en el esquema de Italia</h5>
+                            <p class="card-text small">El defensor del Inter se consolida como el pilar defensivo de la selección azzurra.</p>
+                            <a href="html/noticia-bastoni.html" class="btn btn-sm btn-nexo">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://www.lanacion.com.ar/resizer/v2/agostina-paez-afuera-del-YKQPZ4CV7RGJTMV3ZGAXFM7J5U.png?auth=581c0e0b941b750ee023be674a379eb8185a6e00192b63dd3c61ec84bd0a2493&width=420&height=280&quality=70&smart=true" class="card-img-top" alt="Agostina Páez">
+                        <div class="card-body">
+                            <h5 class="card-title">Agostina Páez brilla en el patín artístico</h5>
+                            <p class="card-text small">La joven promesa argentina logró una actuación histórica en el certamen internacional.</p>
+                            <a href="html/noticia-paez.html" class="btn btn-sm btn-nexo">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://www.lanacion.com.ar/resizer/v2/mbappe-pica-la-pelota-con-clase-y-anota-el-1-0-de-DTGABQI7LFFU5F3EJDI2QNI6UI.jpg?auth=49b53f0db74b45e4b2b34db6513943c664abe2312aa47ed606d15c191dda1583&width=420&height=280&quality=70&smart=true" class="card-img-top" alt="Mbappe">
+                        <div class="card-body">
+                            <h5 class="card-title">El golazo de Mbappé que recorre el mundo</h5>
+                            <p class="card-text small">Definición de crack para abrir el marcador en el duelo de la jornada.</p>
+                            <a href="html/noticia-mbappe.html" class="btn btn-sm btn-nexo">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Política e Internacional -->
+        <div class="row mb-5">
+            <div id="politica" class="col-lg-6">
+                <h2 class="titulo-seccion h1">Política</h2>
+                <div class="card mb-3">
+                    <!-- row g-0: Elimina márgenes internos para imágenes horizontales -->
+                    <div class="row g-0">
+                        <!-- col-md-4: Imagen a la izquierda en desktop -->
+                        <div class="col-md-4">
+                            <!-- object-fit-cover: Asegura que la imagen llene el espacio sin deformarse -->
+                            <img src="https://www.lanacion.com.ar/resizer/v2/kicillof-magario-bianco-y-alvarez-LKR7SEPNLVE43G4DAVFVQSQJKQ.jpg?auth=b7447034c08e8cf7e475a3f7b942a77f5711b0e7a403173a25bf8d736af19901&width=420&height=280&quality=70&smart=true" class="img-fluid rounded-start h-100 object-fit-cover" alt="Kicillof">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Kicillof refuerza su gestión</h5>
+                                <p class="card-text small">El gobernador bonaerense se reunió con su gabinete para delinear los próximos pasos.</p>
+                                <a href="html/noticia-kicillof.html" class="btn btn-sm btn-nexo">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="internacional" class="col-lg-6">
+                <h2 class="titulo-seccion h1">Internacional</h2>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://www.lanacion.com.ar/resizer/v2/kim-con-el-rifle-automatico-que-le-regalo-N4PXKRI3YRBMJHK64TZPHOJWBI.JPG?auth=4cf64393811e404031811b4e013c4fcf7b48c58aebd8b9f3032624e403050026&width=420&height=280&quality=70&smart=true" class="img-fluid rounded-start h-100 object-fit-cover" alt="Kim Jong-un">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Mensaje desafiante de Kim Jong-un</h5>
+                                <p class="card-text small">Corea del Norte exhibe nuevo armamento en medio de crecientes tensiones.</p>
+                                <a href="html/noticia-kim.html" class="btn btn-sm btn-nexo">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Espectáculos y Sociedad -->
+        <section id="espectaculos" class="mb-5">
+            <h2 class="titulo-seccion h1">Espectáculos y Sociedad</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="https://www.lanacion.com.ar/resizer/v2/morena-rial-ahora-goza-del-beneficio-del-arresto-4ZE6UHNTY5D6PF2O2AMVTOOAXM.jpg?auth=238998db203e50c369f75d87c25c7ca72620a4c58f572e9e4307fce40789a908&width=800&height=400&quality=70&smart=true" class="card-img-top" alt="Morena Rial">
+                        <div class="card-body">
+                            <h5 class="card-title">Morena Rial: detalles de su nueva vida</h5>
+                            <p class="card-text">La hija de Jorge Rial habló sobre su situación actual y sus planes para el futuro.</p>
+                            <a href="html/noticia-morena.html" class="btn btn-nexo">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="https://www.lanacion.com.ar/resizer/v2/juliana-y-su-hija-valentina-pasean-por-LQY5I2JG3VB53DGO5576YDRGDQ.jpg?auth=613d6cd576f4309cf59e8fe8556a703222c869b492939e7c8ea9f90e2218c509&width=800&height=400&quality=70&smart=true" class="card-img-top" alt="Juliana Awada">
+                        <div class="card-body">
+                            <h5 class="card-title">Tarde de paseo: Juliana Awada y Valentina</h5>
+                            <p class="card-text">Captaron a la ex primera dama recorriendo las calles de Buenos Aires con su hija mayor.</p>
+                            <a href="html/noticia-juliana.html" class="btn btn-nexo">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- mt-auto: Empuja el footer hacia abajo si hay poco contenido -->
+    <footer class="pie-pagina mt-auto">
+        <div class="container">
+            <div class="row">
+                <!-- col-md-4 mb-4: 3 columnas en desktop, 1 columna en móvil con margen inferior -->
+                <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                    <h2 class="navbar-brand text-white fs-1">NEXO</h2>
+                    <p>Información veraz, independiente y al instante.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h5>Secciones</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#politica" class="text-white text-decoration-none">Política</a></li>
+                        <li><a href="#internacional" class="text-white text-decoration-none">Internacional</a></li>
+                        <li><a href="#deportes" class="text-white text-decoration-none">Deportes</a></li>
+                        <li><a href="#economia" class="text-white text-decoration-none">Economía</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <h5>Contacto</h5>
+                    <p>Email: info@diarionexo.com<br>Tel: +54 11 1234-5678</p>
+                </div>
+            </div>
+            <!-- my-4: Margen vertical de 4 unidades -->
+            <hr class="my-4">
+            <div class="text-center">
+                <small>&copy; 2026 Diario NEXO. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Estructura del Pop-up (Modal) de Contacto -->
+    <!-- modal: Define el contenedor del pop-up -->
+    <!-- fade: Añade una transición de desvanecimiento al abrir/cerrar -->
+    <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel" aria-hidden="true">
+        <!-- modal-dialog: Controla el ancho y posición del modal -->
+        <div class="modal-dialog modal-dialog-centered">
+            <!-- modal-content: El contenedor real con borde y fondo -->
+            <!-- bg-white: Color de fondo blanco de Bootstrap -->
+            <div class="modal-content bg-white shadow-lg">
+                <!-- modal-header: Cabecera del modal -->
+                <!-- bg-primary: Color azul de Bootstrap para la cabecera -->
+                <!-- text-white: Texto en blanco para contraste -->
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title titulo-principal" id="modalContactoLabel">Contáctanos</h5>
+                    <!-- btn-close-white: Botón X en blanco de Bootstrap -->
+                    <button type="button" class="btn-close btn-close-white" data-bs-toggle="modal" data-bs-target="#modalContacto" aria-label="Close"></button>
+                </div>
+                <!-- modal-body: Cuerpo principal con el formulario -->
+                <!-- bg-light: Fondo gris muy claro de Bootstrap -->
+                <div class="modal-body p-4 bg-light">
+                    <!-- needs-validation: Clase de Bootstrap para activar la validación personalizada -->
+                    <!-- novalidate: Desactiva la validación nativa del navegador para usar la de Bootstrap -->
+                    <form id="formContacto">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label fw-bold text-dark">Nombre completo</label>
+                            <input type="text" class="form-control border-primary" id="nombre" placeholder="Tu nombre..." 
+                                   pattern="[A-Za-z\sÁÉÍÓÚáéíóúÑñ]{3,}" title="El nombre debe tener al menos 3 caracteres y no contener números" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold text-dark">Correo electrónico (solo Gmail)</label>
+                            <input type="email" class="form-control border-primary" id="email" placeholder="ejemplo@gmail.com" 
+                                   pattern=".+@gmail\.com" title="Por favor, usa una cuenta de Gmail (ejemplo@gmail.com)" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label fw-bold text-dark">Mensaje</label>
+                            <textarea class="form-control border-primary" id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        </div>
+                        <div class="modal-footer border-0 bg-light px-0 pb-0">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary px-4 shadow">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para cerrar el menú hamburguesa al seleccionar una opción -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecciona todos los enlaces y botones dentro del menú
+            const navItems = document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .btn');
+            const menuToggle = document.getElementById('navbarNav');
+            const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+            
+            navItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    // Solo cierra si el menú está desplegado (visto en móviles)
+                    if (window.getComputedStyle(document.querySelector('.navbar-toggler')).display !== 'none') {
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
