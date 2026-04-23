@@ -1,0 +1,21 @@
+.component-section {
+    min-height: 200px;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#target-mouseover {
+    transition: background-color 0.3s;
+}
+
+#target-mouseover.hovered {
+    background-color: #ffc107 !important;
+    transform: scale(1.02);
+}
+
+.nav-link {
+    cursor: pointer;
+}

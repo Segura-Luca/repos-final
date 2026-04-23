@@ -1,0 +1,21 @@
+.card {
+    transition: transform 0.3s;
+}
+
+#result-container {
+    min-height: 200px;
+}
+
+.result-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: bold;
+    color: #198754;
+}
