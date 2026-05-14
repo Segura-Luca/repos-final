@@ -1,0 +1,268 @@
+/* Futuristic Cyber Palette */
+:root {
+    --bg-dark: #050505;
+    --bg-dark-soft: #0a0a0f;
+    --panel-bg: rgba(10, 10, 15, 0.7);
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00ff;
+    --text-main: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --error-red: #ff3333;
+    --border-glass: rgba(0, 243, 255, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-image: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #050505 100%);
+    min-height: 100vh;
+}
+
+/* Background grid effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+
+/* Encabezado */
+.brand-title {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #fff, var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+@media (max-width: 575.98px) {
+    .brand-title {
+        font-size: 2.2rem !important;
+        letter-spacing: 2px;
+    }
+}
+
+.brand-tagline {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.header-divider {
+    height: 1px;
+    width: 200px;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+}
+
+.panel-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    letter-spacing: 2px;
+    border-left: 4px solid var(--neon-cyan);
+    padding-left: 15px;
+}
+
+/* Contenedor de Composición (Formulario) */
+.paper-container {
+    background: var(--panel-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    position: relative;
+}
+
+.paper-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+}
+
+.text-cyan { color: var(--neon-cyan); }
+.tracking-wider { letter-spacing: 2px; }
+.tracking-widest { letter-spacing: 4px; }
+.bg-dark-soft { background: rgba(0, 0, 0, 0.3) !important; }
+.border-glass { border: 1px solid var(--border-glass) !important; }
+
+.form-control:focus, .form-select:focus {
+    outline: none;
+    border-color: var(--neon-cyan) !important;
+    background: rgba(0, 243, 255, 0.05) !important;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+    color: #fff;
+}
+
+.btn-editorial {
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s;
+}
+
+.btn-outline-cyan {
+    color: var(--neon-cyan);
+    border-color: var(--neon-cyan);
+}
+
+.btn-outline-cyan:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+/* Feed de Noticias */
+.news-card {
+    background: var(--panel-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    border-radius: 8px;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: slideUp 0.5s ease forwards;
+    overflow: hidden;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
+}
+
+.news-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--border-glass);
+    position: relative;
+}
+
+.news-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--bg-dark), transparent);
+}
+
+.news-meta {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    letter-spacing: 1.5px;
+}
+
+.news-priority {
+    font-weight: 900;
+    padding: 2px 8px;
+    border: 1px solid var(--neon-cyan);
+    border-radius: 2px;
+}
+
+.news-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+}
+
+.news-card .subtitulo {
+    color: var(--text-dim);
+    border-left: 2px solid var(--neon-magenta);
+    padding-left: 10px;
+}
+
+.news-card .cuerpo {
+    color: var(--text-main);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-footer {
+    border-top: 1px solid var(--border-glass);
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-dim);
+}
+
+.empty-feed {
+    text-align: center;
+    padding: 5rem;
+    color: var(--text-dim);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Notificaciones */
+.notification {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    animation: fadeIn 0.3s ease;
+}
+
+.notification-success {
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+}
+
+.notification-error {
+    background: rgba(255, 51, 51, 0.1);
+    border: 1px solid var(--error-red);
+    color: var(--error-red);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+}
+
+.notification-error {
+    background-color: rgba(163, 74, 74, 0.1);
+    border-color: var(--error-red);
+    color: var(--error-red);
+}
+
+.notification-success {
+    background-color: rgba(45, 79, 54, 0.1);
+    border-color: #2D4F36;
+    color: #2D4F36;
+}
+
+/* Responsividad */
+@media (max-width: 1000px) {
+    .cms-layout {
+        grid-template-columns: 1fr;
+    }
+}

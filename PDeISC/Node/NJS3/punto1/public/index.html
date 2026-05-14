@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincronización Cuántica - Núcleo Nexus</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container-fluid p-0 overflow-hidden">
+        <div class="row g-0 min-vh-100">
+            <!-- Parte Izquierda: Imagen Arquitectura -->
+            <section class="col-lg-6 left-panel d-flex align-items-center justify-content-center position-relative">
+                <div class="overlay"></div>
+                <div class="content-left position-relative text-center p-4">
+                    <h1 class="brand-title display-1 fw-black">Núcleo Nexus</h1>
+                    <p class="brand-tagline h4">Evolución, Eficiencia, Futuro.</p>
+                </div>
+            </section>
+
+            <!-- Parte Derecha: Formulario de Suscripción -->
+            <section class="col-lg-6 right-panel d-flex align-items-center justify-content-center p-4 p-md-5">
+                <!-- Vista de Inicio (Landing) -->
+                <div id="landingView" class="view w-100 mx-auto" style="max-width: 500px;">
+                    <h2 class="section-title mb-4">Actualizaciones del Sistema: Red Neural</h2>
+                    <p class="section-desc mb-5 h5 fw-light">Acceda a flujos de datos encriptados y actualizaciones neurales de alta prioridad directamente en su corteza.</p>
+                    <button id="btnStart" class="btn btn-outline-cyan btn-signature w-100 py-3">Inicializar Integración</button>
+                </div>
+
+                <!-- Vista de Formulario -->
+                <div id="formView" class="view d-none w-100 mx-auto" style="max-width: 500px;">
+                    <h2 class="section-title mb-4">Integración de Enlace Neural</h2>
+                    <p class="section-desc mb-4 fw-light">Complete sus datos biométricos para unirse a nuestra red descentralizada.</p>
+                    
+                    <div id="alertContainer"></div>
+
+                    <form id="subscriptionForm" novalidate class="mt-4">
+                        <div class="form-group mb-4">
+                            <label for="nombre" class="form-label text-cyan small fw-bold text-uppercase tracking-wider">Identificador (Nombre)</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control bg-dark-soft border-glass text-light py-3" placeholder="Ingrese nombre" required>
+                            <span class="error-msg text-danger small mt-1 d-block" id="error-nombre"></span>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="apellido" class="form-label text-cyan small fw-bold text-uppercase tracking-wider">Linaje (Apellido)</label>
+                            <input type="text" id="apellido" name="apellido" class="form-control bg-dark-soft border-glass text-light py-3" placeholder="Ingrese apellido" required>
+                            <span class="error-msg text-danger small mt-1 d-block" id="error-apellido"></span>
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="email" class="form-label text-cyan small fw-bold text-uppercase tracking-wider">Dirección Neural (Email)</label>
+                            <input type="email" id="email" name="email" class="form-control bg-dark-soft border-glass text-light py-3" placeholder="usuario@nexus.io" required>
+                            <span class="error-msg text-danger small mt-1 d-block" id="error-email"></span>
+                        </div>
+
+                        <div class="form-actions d-grid gap-3">
+                            <button type="submit" class="btn btn-outline-cyan btn-signature py-3">Confirmar Integración</button>
+                            <button type="button" id="btnBack" class="btn btn-link text-dim text-decoration-none small text-uppercase tracking-widest">Abortar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Vista de Éxito -->
+                <div id="successView" class="view d-none w-100 mx-auto text-center" style="max-width: 500px;">
+                    <div class="success-icon display-1 mb-4">⌬</div>
+                    <h2 class="section-title mb-4">Enlace Establecido</h2>
+                    <p id="successMessage" class="section-desc mb-5 h5 fw-light"></p>
+                    <button onclick="location.reload()" class="btn btn-outline-cyan btn-signature w-100 py-3">Desfragmentar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Identidad Neural - Núcleo Nexus</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <h1 class="brand-title title-elite display-3 fw-bold mb-2">Registro de Identidad Neural</h1>
+            <p class="subtitle-elite h5 text-magenta opacity-75">Red Nexus — Decodificando el Futuro</p>
+            <div class="header-divider mx-auto my-4"></div>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+                <!-- Tarjeta de Registro -->
+                <div class="card card-elite border-0 shadow-lg mb-5">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="card-title text-center mb-5 h4 text-uppercase tracking-wider text-cyan">Solicitud de Integración al Núcleo</h2>
+                        
+                        <!-- Contenedor de Alertas -->
+                        <div id="alertContainer"></div>
+
+                        <form id="formularioRegistro" novalidate class="mt-4">
+                            <div class="row g-4">
+                                <!-- Nombre -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <input type="text" class="form-control-elite bg-dark-soft text-light" id="nombre" name="nombre" placeholder="Identificador" required>
+                                        <label for="nombre">Identificador</label>
+                                        <div class="invalid-feedback-custom" id="error-nombre"></div>
+                                    </div>
+                                </div>
+                                <!-- Apellido -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <input type="text" class="form-control-elite bg-dark-soft text-light" id="apellido" name="apellido" placeholder="Linaje" required>
+                                        <label for="apellido">Linaje</label>
+                                        <div class="invalid-feedback-custom" id="error-apellido"></div>
+                                    </div>
+                                </div>
+                                <!-- Edad -->
+                                <div class="col-md-4">
+                                    <div class="form-floating-elite">
+                                        <input type="number" class="form-control-elite bg-dark-soft text-light" id="edad" name="edad" placeholder="Ciclos Biológicos" required>
+                                        <label for="edad">Ciclos Biológicos</label>
+                                        <div class="invalid-feedback-custom" id="error-edad"></div>
+                                    </div>
+                                </div>
+                                <!-- Fecha de Nacimiento -->
+                                <div class="col-md-8">
+                                    <div class="form-floating-elite">
+                                        <input type="date" class="form-control-elite bg-dark-soft text-light" id="fechaNacimiento" name="fechaNacimiento" required>
+                                        <label for="fechaNacimiento">Marca de Tiempo de Creación</label>
+                                        <div class="invalid-feedback-custom" id="error-fechaNacimiento"></div>
+                                    </div>
+                                </div>
+                                <!-- Sexo -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <select class="form-select-elite bg-dark-soft text-light" id="sexo" name="sexo" required>
+                                            <option value="" disabled selected>Seleccione Variante</option>
+                                            <option value="Masculino">Estándar-M</option>
+                                            <option value="Femenino">Estándar-F</option>
+                                        </select>
+                                        <label for="sexo">Variante Orgánica</label>
+                                        <div class="invalid-feedback-custom" id="error-sexo"></div>
+                                    </div>
+                                </div>
+                                <!-- Documento -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <input type="text" class="form-control-elite bg-dark-soft text-light" id="documento" name="documento" placeholder="Firma de ID Neural" required>
+                                        <label for="documento">Firma de ID Neural</label>
+                                        <div class="invalid-feedback-custom" id="error-documento"></div>
+                                    </div>
+                                </div>
+                                <!-- Estado Civil -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <select class="form-select-elite bg-dark-soft text-light" id="estadoCivil" name="estadoCivil" required>
+                                            <option value="" disabled selected>Estado del Enlace</option>
+                                            <option value="Soltero/a">Desconectado</option>
+                                            <option value="Casado/a">Sincronizado</option>
+                                            <option value="Divorciado/a">Desacoplado</option>
+                                            <option value="Viudo/a">Enlace Terminal</option>
+                                        </select>
+                                        <label for="estadoCivil">Estado de Enlace Social</label>
+                                        <div class="invalid-feedback-custom" id="error-estadoCivil"></div>
+                                    </div>
+                                </div>
+                                <!-- Nacionalidad -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <input type="text" class="form-control-elite bg-dark-soft text-light" id="nacionalidad" name="nacionalidad" placeholder="Sector de Origen" required>
+                                        <label for="nacionalidad">Sector de Origen</label>
+                                        <div class="invalid-feedback-custom" id="error-nacionalidad"></div>
+                                    </div>
+                                </div>
+                                <!-- Teléfono -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <input type="tel" class="form-control-elite bg-dark-soft text-light" id="telefono" name="telefono" placeholder="Frecuencia Neural" required>
+                                        <label for="telefono">Frecuencia Neural (Teléfono)</label>
+                                        <div class="invalid-feedback-custom" id="error-telefono"></div>
+                                    </div>
+                                </div>
+                                <!-- Mail -->
+                                <div class="col-md-6">
+                                    <div class="form-floating-elite">
+                                        <input type="email" class="form-control-elite bg-dark-soft text-light" id="mail" name="mail" placeholder="Nodo de Datos" required>
+                                        <label for="mail">Nodo de Datos (Email)</label>
+                                        <div class="invalid-feedback-custom" id="error-mail"></div>
+                                    </div>
+                                </div>
+                                <!-- Hijos (Condicional) -->
+                                <div class="col-md-12">
+                                    <div class="form-group-elite p-3 border-glass rounded bg-dark-soft">
+                                        <label class="d-block mb-3 label-elite small fw-bold text-uppercase tracking-wider">¿Descendencia Biológica Detectada?</label>
+                                        <div class="d-flex gap-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input form-check-input-elite" type="radio" name="tieneHijos" id="hijosSi" value="si">
+                                                <label class="form-check-label text-dim" for="hijosSi">SÍ</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input form-check-input-elite" type="radio" name="tieneHijos" id="hijosNo" value="no" checked>
+                                                <label class="form-check-label text-dim" for="hijosNo">NO</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Cantidad de Hijos (Oculto inicialmente) -->
+                                <div class="col-md-6 d-none" id="contenedorCantidadHijos">
+                                    <div class="form-floating-elite">
+                                        <input type="number" class="form-control-elite bg-dark-soft text-light" id="cantidadHijos" name="cantidadHijos" placeholder="Conteo de Nodos Descendientes" value="0">
+                                        <label for="cantidadHijos">Conteo de Nodos Descendientes</label>
+                                        <div class="invalid-feedback-custom" id="error-cantidadHijos"></div>
+                                    </div>
+                                </div>
+                                <!-- Profesión -->
+                                <div class="col-md-12">
+                                    <div class="form-floating-elite">
+                                        <input type="text" class="form-control-elite bg-dark-soft text-light" id="profesion" name="profesion" placeholder="Protocolo de Habilidades" required>
+                                        <label for="profesion">Protocolo de Habilidades (Profesión)</label>
+                                        <div class="invalid-feedback-custom" id="error-profesion"></div>
+                                    </div>
+                                </div>
+                                <!-- Dirección -->
+                                <div class="col-md-12">
+                                    <div class="form-floating-elite">
+                                        <input type="text" class="form-control-elite bg-dark-soft text-light" id="direccion" name="direccion" placeholder="Coordenadas de Red" required>
+                                        <label for="direccion">Coordenadas de Red (Dirección)</label>
+                                        <div class="invalid-feedback-custom" id="error-direccion"></div>
+                                    </div>
+                                </div>
+                                <!-- Intereses -->
+                                <div class="col-md-12">
+                                    <div class="form-group-elite p-3 border-glass rounded bg-dark-soft">
+                                        <label class="form-label-elite d-block mb-3 small fw-bold text-uppercase tracking-wider">Protocolos de Interés de Datos</label>
+                                        <div class="row g-3">
+                                            <div class="col-sm-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input form-check-input-elite" type="checkbox" name="intereses" value="Política" id="int-politica">
+                                                    <label class="form-check-label text-dim" for="int-politica">Geopolítica</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input form-check-input-elite" type="checkbox" name="intereses" value="Economía" id="int-economia">
+                                                    <label class="form-check-label text-dim" for="int-economia">Criptoeconomía</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input form-check-input-elite" type="checkbox" name="intereses" value="Cultura" id="int-cultura">
+                                                    <label class="form-check-label text-dim" for="int-cultura">Cibercultura</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="invalid-feedback-custom mt-2" id="error-intereses"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Botón Enviar -->
+                            <div class="mt-5 text-center">
+                                <button type="submit" class="btn btn-outline-cyan btn-elite w-100 py-3 text-uppercase tracking-widest fw-bold">Iniciar Sincronización</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sección de Lista de Miembros -->
+                <div class="mt-5 pt-4">
+                    <h2 class="title-elite text-center mb-5 h3 text-uppercase tracking-widest text-magenta">Entidades Neurales Integradas</h2>
+                    <div id="directorioMiembros" class="row g-4">
+                        <!-- Las tarjetas de miembros se cargarán aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

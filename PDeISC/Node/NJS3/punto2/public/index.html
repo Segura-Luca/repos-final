@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Flujo Neural - Núcleo Nexus</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container py-5">
+        <header class="editorial-header text-center mb-5">
+            <h1 class="brand-title display-3 fw-bold mb-2">Gestor de Flujo Neural</h1>
+            <p class="brand-tagline h5 text-cyan opacity-75">Gestión de Datos Central para la Red Descentralizada</p>
+            <div class="header-divider mx-auto my-4"></div>
+        </header>
+
+        <main>
+            <!-- Sección de Redacción: Ahora horizontal en PC -->
+            <section class="col-12 mb-5">
+                <div class="paper-container p-4 p-md-5">
+                    <h2 class="panel-title mb-4 h4 text-uppercase tracking-wider">Nueva Entrada de Datos</h2>
+                    
+                    <div id="notificationContainer"></div>
+
+                    <form id="formularioNoticia" class="editorial-form mt-4">
+                        <!-- Fila 1: Titular y Subtítulo -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-lg-6">
+                                <label for="titular" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">Titular de la Entrada</label>
+                                <input type="text" id="titular" name="titular" class="form-control bg-dark-soft border-glass text-light py-2" placeholder="Mínimo 10 caracteres" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="subtitulo" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">Resumen de Metadatos</label>
+                                <input type="text" id="subtitulo" name="subtitulo" class="form-control bg-dark-soft border-glass text-light py-2" placeholder="Breve descripción de metadatos" required>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Cuerpo (Ocupa todo el ancho pero más corto) -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <label for="cuerpo" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">Flujo de Datos Primario</label>
+                                <textarea id="cuerpo" name="cuerpo" rows="3" class="form-control bg-dark-soft border-glass text-light py-2" placeholder="Mínimo 50 caracteres" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Fila 3: Categoría, Autor e Imagen -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-lg-3 col-md-6">
+                                <label for="categoria" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">Clasificación</label>
+                                <select id="categoria" name="categoria" class="form-select bg-dark-soft border-glass text-light py-2" required>
+                                    <option value="" disabled selected>Seleccione...</option>
+                                    <option value="Política">Geopolítica</option>
+                                    <option value="Economía">Criptoeconomía</option>
+                                    <option value="Cultura">Cibercultura</option>
+                                    <option value="Internacional">Fuera del Mundo</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <label for="autor" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">ID del Transmisor</label>
+                                <input type="text" id="autor" name="autor" class="form-control bg-dark-soft border-glass text-light py-2" placeholder="Operador" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="imagenUrl" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">URL de Datos Visuales</label>
+                                <input type="url" id="imagenUrl" name="imagenUrl" class="form-control bg-dark-soft border-glass text-light py-2" placeholder="https://nexus.io/data/img.jpg" required>
+                            </div>
+                        </div>
+
+                        <!-- Fila 4: Fecha, Prioridad y Botón -->
+                        <div class="row g-3 align-items-end">
+                            <div class="col-lg-3 col-md-6">
+                                <label for="fecha" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">Marca de Tiempo</label>
+                                <input type="date" id="fecha" name="fecha" class="form-control bg-dark-soft border-glass text-light py-2" required>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <label for="prioridad" class="form-label small fw-bold text-cyan text-uppercase tracking-wider">Nivel de Prioridad</label>
+                                <select id="prioridad" name="prioridad" class="form-select bg-dark-soft border-glass text-light py-2" required>
+                                    <option value="Baja">Baja</option>
+                                    <option value="Media" selected>Normal</option>
+                                    <option value="Alta">Alta</option>
+                                    <option value="Urgente">CRÍTICA</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 d-grid mt-3 mt-lg-0">
+                                <button type="submit" class="btn btn-outline-cyan btn-editorial py-2 text-uppercase tracking-widest fw-bold">Transmitir Datos al Nexo</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Sección de Muro de Noticias: Ahora debajo -->
+            <section class="col-12 feed-panel">
+                <h2 class="panel-title mb-4 h4 text-uppercase tracking-wider">Flujo Neural</h2>
+                <div id="muroNoticias" class="row g-4">
+                    <!-- Las noticias se renderizarán aquí -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+                <div id="muroNoticias" class="news-grid">
+                    <!-- Las noticias se renderizarán aquí -->
+                    <div class="empty-feed">Esperando nuevas crónicas...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

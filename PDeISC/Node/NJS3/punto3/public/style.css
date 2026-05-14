@@ -1,0 +1,250 @@
+/* Futuristic Cyber Palette */
+:root {
+    --bg-dark: #050505;
+    --bg-dark-soft: #0a0a0f;
+    --panel-bg: rgba(10, 10, 15, 0.7);
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00ff;
+    --text-main: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --error-red: #ff3333;
+    --success-cyan: #00f3ff;
+    --border-glass: rgba(0, 243, 255, 0.2);
+    --glass-bg: rgba(10, 10, 15, 0.8);
+}
+
+body {
+    background: var(--bg-dark);
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Background grid and animation */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 243, 255, 0.05) 0%, transparent 80%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Tipografía */
+.title-elite {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+@media (max-width: 575.98px) {
+    .title-elite {
+        font-size: 1.8rem !important;
+        letter-spacing: 2px;
+    }
+}
+
+.subtitle-elite {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-magenta);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text-magenta { color: var(--neon-magenta); }
+.text-cyan { color: var(--neon-cyan); }
+.tracking-wider { letter-spacing: 2px; }
+.tracking-widest { letter-spacing: 4px; }
+.bg-dark-soft { background: rgba(0, 0, 0, 0.3) !important; }
+.border-glass { border: 1px solid var(--border-glass) !important; }
+
+.header-divider {
+    height: 1px;
+    width: 200px;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+}
+
+/* Glassmorphism Card */
+.card-elite {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass) !important;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de los Inputs */
+.form-floating-elite {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-control-elite, .form-select-elite {
+    border: none;
+    border-bottom: 1px solid var(--border-glass);
+    border-radius: 0;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: transparent !important;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main) !important;
+}
+
+.form-control-elite:focus, .form-select-elite:focus {
+    outline: none;
+    border-bottom: 2px solid var(--neon-cyan);
+    box-shadow: 0 10px 15px -10px rgba(0, 243, 255, 0.2);
+}
+
+.form-floating-elite label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 0.65rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Labels for checkboxes and radios */
+.label-elite {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+}
+
+/* Signature Button */
+.btn-elite {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 4px;
+    transition: all 0.4s ease;
+}
+
+.btn-outline-cyan {
+    color: var(--neon-cyan);
+    border-color: var(--neon-cyan);
+}
+
+.btn-outline-cyan:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+/* Checkboxes y Radios */
+.form-check-input-elite {
+    border-color: var(--neon-cyan);
+    background-color: transparent;
+}
+
+.form-check-input-elite:checked {
+    background-color: var(--neon-cyan);
+    border-color: var(--neon-cyan);
+}
+
+/* Alertas */
+.alert-premium {
+    border: 1px solid var(--border-glass);
+    border-radius: 4px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: slideDownFadeIn 0.5s forwards;
+}
+
+@keyframes slideDownFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Directorio de Miembros */
+.member-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-glass);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-top: 3px solid var(--neon-cyan);
+    border-radius: 4px;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 15px 30px rgba(0, 243, 255, 0.2);
+}
+
+.member-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Estilos para los datos dentro de la tarjeta de miembro */
+.label-elite-card {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.data-elite-card {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Validaciones y Errores */
+.invalid-feedback-custom {
+    color: var(--error-red);
+    font-size: 0.7rem;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 0.3rem;
+    letter-spacing: 1px;
+}
+
+
+.invalid-feedback-custom {
+    color: var(--error-burgundy);
+    font-size: 0.8rem;
+    margin-top: 8px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    display: block;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
